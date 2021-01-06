@@ -9,8 +9,8 @@ export const COLORS = {
   green: '#66D59A',
   lightGreen: '#E6FEF0',
 
-  lime: '#00BA63',
-  emerald: '#2BC978',
+  lime: '#2d3142',
+  emerald: '#197278',
 
   red: '#FF4134',
   lightRed: '#FFF1F0',

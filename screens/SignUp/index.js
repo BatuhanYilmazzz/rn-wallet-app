@@ -1,22 +1,11 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  Image,
-  TextInput,
-  Modal,
-  FlatList,
-  KeyboardAvoidingView,
-  ScrollView,
-  Platform,
-} from 'react-native';
+import {KeyboardAvoidingView, ScrollView, Platform} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {COLORS, SIZES, FONTS, icons, images} from '../../constants';
-import Form from './Form';
-import Header from './Header';
-import Logo from './Logo';
+import {COLORS} from '../../constants';
+
+import Form from '../../components/SignUp/Form';
+import Header from '../../components/SignUp/Header';
+import Logo from '../../components/SignUp/Logo';
 
 const SignUpScreen = () => {
   return (
