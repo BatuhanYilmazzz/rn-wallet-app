@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-
+import {COLORS} from '../../constants';
 const Styles = StyleSheet.create({
   tabBarOption: {
     position: 'absolute',
@@ -8,6 +8,15 @@ const Styles = StyleSheet.create({
     right: 0,
     backgroundColor: 'transparent',
     elevation: 0,
+  },
+  tabBarCustomButton: {
+    top: -22.5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: COLORS.lime,
   },
 });
 
