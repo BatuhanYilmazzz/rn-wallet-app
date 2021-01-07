@@ -151,7 +151,7 @@ const Form = () => {
             />
           </View>
         </View>
-        {/** Password */}
+        {/** Password Area*/}
         <View style={Styles.passwordContainer}>
           <Text style={Styles.passwordText}>Password</Text>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
