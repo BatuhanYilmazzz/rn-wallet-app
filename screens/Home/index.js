@@ -1,14 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import SpecialPromo from '../../components/Home/SpecialPromo';
+import {COLORS} from '../../constants';
 
 const HomeScreen = () => {
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
+    <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
+      <SpecialPromo />
+    </SafeAreaView>
   );
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({});
