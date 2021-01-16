@@ -12,6 +12,7 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import {COLORS, FONTS, icons, SIZES} from '../../constants';
 import Styles from './styles';
+import ModalItem from './ModalItem';
 
 const Form = () => {
   const navigation = useNavigation();
@@ -44,28 +45,7 @@ const Form = () => {
         }
       });
   }, []);
-  function renderAreaCodesModal() {
-    const renderItem = ({item}) => {
-      return (
-        <TouchableOpacity
-          style={{padding: SIZES.padding, flexDirection: 'row'}}
-          onPress={() => {
-            setSelectedArea(item);
-            setModalVisible(false);
-          }}>
-          <Image
-            source={{uri: item.flag}}
-            style={{
-              width: 30,
-              height: 30,
-              marginRight: 10,
-            }}
-          />
-          <Text style={{...FONTS.body4}}>{item.name}</Text>
-        </TouchableOpacity>
-      );
-    };
-
+  function renderModal() {
     return (
       <Modal animationType="slide" transparent={true} visible={modalVisible}>
         <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
@@ -80,7 +60,7 @@ const Form = () => {
               }}>
               <FlatList
                 data={areas}
-                renderItem={renderItem}
+                renderItem={ModalItem}
                 keyExtractor={(item) => item.code}
                 showsVerticalScrollIndicator={false}
                 style={{
@@ -151,7 +131,7 @@ const Form = () => {
             />
           </View>
         </View>
-        {/** Password */}
+        {/** Password Area*/}
         <View style={Styles.passwordContainer}>
           <Text style={Styles.passwordText}>Password</Text>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -185,7 +165,7 @@ const Form = () => {
           </TouchableOpacity>
         </View>
       </View>
-      {renderAreaCodesModal()}
+      {renderModal()}
     </>
   );
 };

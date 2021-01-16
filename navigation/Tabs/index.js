@@ -1,15 +1,12 @@
 import React from 'react';
-import {View, Image, TouchableOpacity} from 'react-native';
-import {
-  createBottomTabNavigator,
-  BottomTabBar,
-} from '@react-navigation/bottom-tabs';
-import Svg, {Path} from 'react-native-svg';
-import {isIphoneX} from 'react-native-iphone-x-helper';
+import {Image} from 'react-native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {HomeScreen, ScanScreen} from '../../screens';
 import {COLORS, icons} from '../../constants';
 import Styles from './styles';
+import TabBarCustomButton from './TabBarCustomButton';
+import CustomTabBar from './CustomTabBar';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,7 +16,8 @@ const Tabs = () => {
       tabBarOptions={{
         showLabel: false,
         style: Styles.tabBarOption,
-      }}>
+      }}
+      tabBar={(props) => <CustomTabBar {...props} />}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}
@@ -35,6 +33,7 @@ const Tabs = () => {
               }}
             />
           ),
+          tabBarButton: (props) => <TabBarCustomButton {...props} />,
         }}
       />
       <Tab.Screen
@@ -52,6 +51,7 @@ const Tabs = () => {
               }}
             />
           ),
+          tabBarButton: (props) => <TabBarCustomButton {...props} />,
         }}
       />
       <Tab.Screen
@@ -69,6 +69,7 @@ const Tabs = () => {
               }}
             />
           ),
+          tabBarButton: (props) => <TabBarCustomButton {...props} />,
         }}
       />
     </Tab.Navigator>
