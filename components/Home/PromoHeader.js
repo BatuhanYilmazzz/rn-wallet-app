@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {COLORS, SIZES, FONTS, images, specialPromoData} from '../../constants';
+import {COLORS, SIZES, FONTS} from '../../constants';
 const PromoHeader = () => {
   return (
     <View

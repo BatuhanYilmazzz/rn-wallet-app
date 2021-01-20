@@ -8,7 +8,7 @@
 
 import React from 'react';
 
-import {SignUpScreen, HomeScreen} from './screens';
+import {SignUpScreen} from './screens';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import Tabs from './navigation/Tabs';
